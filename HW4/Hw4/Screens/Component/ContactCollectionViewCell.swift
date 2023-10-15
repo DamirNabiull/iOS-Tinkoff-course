@@ -45,13 +45,13 @@ class ContactCollectionViewCell: UICollectionViewCell {
 
         NSLayoutConstraint.activate([
             // Avatar layout
-            cellAvatar.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+            cellAvatar.leftAnchor.constraint(equalTo: contentView.leftAnchor),
             cellAvatar.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.8),
             cellAvatar.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             cellAvatar.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.3),
             
             // Name layout
-            cellContactName.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 15),
+            cellContactName.leftAnchor.constraint(equalTo: cellAvatar.rightAnchor, constant: 15),
             cellContactName.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
